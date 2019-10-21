@@ -24,6 +24,9 @@ Things you may want to cover:
 * ...
 
 
+
+**ここからです**
+ 
 ## groups_usersテーブル
 
 |Column|Type|Options|
