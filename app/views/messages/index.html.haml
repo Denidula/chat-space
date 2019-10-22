@@ -1,0 +1,82 @@
+.contents
+
+  .left
+
+    .left-header
+      .left-header__box
+        .left-header__box__name
+          %p
+            seo
+          %ul
+            %li
+              =link_to "/" do
+                %i.fa.fa-edit
+            %li 
+              =link_to "/" do
+                %i.fa.fa-cog
+    
+    .left-main
+      .left-main__box
+        .left-main__box__p
+          %p
+            sample
+        .left-main__box__p2
+          %p
+            Good bye world
+
+  .right
+
+    .right-header
+      
+      .right-header__left-box
+        %h1
+          sample
+        %ul 
+          Menber :
+          %li 
+            seo 
+          %li 
+            neko
+      .right-header__edit-btn
+        Edit
+
+    .right-main
+
+      .right-main__message
+        .right-main__message__up
+          %p.right-main__message__up__name
+            seo
+          %p.right-main__message__up__time
+            2016/09/21 06:16:55
+        .right-main__message__up__text
+          %p
+            Hello world !
+        
+      .right-main__message
+        .right-main__message__up
+          %p.right-main__message__up__name
+            neko
+          %p.right-main__message__up__time
+            2016/09/22 06:16:55
+        .right-main__message__up__text
+          %p
+            Good bye world !
+
+    .right-form
+      
+      .in-box 
+        .new-message
+          %p 
+            type a message
+
+          %label
+            %i.fa.fa-image
+            %input{type: "file", class: "img"}
+          
+
+        .send-btn
+          %p 
+            Send
+        
+
+
