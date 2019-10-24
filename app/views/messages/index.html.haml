@@ -1,29 +1,8 @@
 .contents
 
   .left
-
-    .left-header
-      .left-header__box
-        .left-header__box__name
-          %p
-            = current_user.name
-          %ul
-            %li
-              = link_to new_group_path do
-                %i.fa.fa-edit
-            %li 
-              =link_to edit_user_path(current_user) do
-                %i.fa.fa-cog
-    
-    .left-main
-      .left-main__box
-        .left-main__box__p
-          %p
-            sample
-        .left-main__box__p2
-          %p
-            Good bye world
-
+    = render 'shared/side_bar'
+        
   .right
 
     .right-header
@@ -71,7 +50,7 @@
 
           %label
             %i.fa.fa-image
-            %input{type: "file", class: "img"}
+            %input{type: "file", class: "img"}/
           
 
         .send-btn
