@@ -112,29 +112,33 @@
       padding: 46px 40px;
       background-color: #fafafa;
 
-      &__message {
+      .message {
         padding-bottom: 40px;
 
-        &__up {
+        .upper-message {
           display: flex;
           margin-bottom: 10px;
 
-          &__name {
+          &__user-name {
             color: #434a54;
             font-size: 16px;
             font-weight: bold;
           }
-          &__time {
+          &__date {
             color: #999999;
             font-size: 12px;
             margin-left: 10px;
           }
         }
 
-        &__up__text {
-          color: #434a54;
-          font-size: 14px;
-          margin-bottom: 10px;
+        .lower-message {
+
+          p {
+            color: #434a54;
+            font-size: 14px;
+            margin-bottom: 10px;
+          }
+          
         }
 
       }
