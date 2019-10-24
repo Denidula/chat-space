@@ -14,7 +14,7 @@
     .left-main
       .left-main__box
         - current_user.groups.each do |group|
-          = link_to '#' do
+          = link_to group_messages_path(group) do
             .left-main__box__p
               = group.name
             .left-main__box__p2
