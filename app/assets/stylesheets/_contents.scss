@@ -37,7 +37,7 @@
 
     .left-main {
 
-      height: 721px;
+      height: calc(100vh - 100px);
       background-color: #2f3e51;
 
       &__box {
@@ -64,7 +64,7 @@
 
   .right {
 
-    width: calc(100% - 300px);
+    width: calc(100vw - 300px);
 
     .right-header {
       height: 100px;
@@ -72,17 +72,15 @@
       display: flex;
       justify-content: space-between;
       border-bottom: 1px solid #eeeeee;
+      overflow: scroll;
 
       &__left-box {
-        font-size: 20px;
-        color: #333333;
-        margin-bottom: 15px;
-        padding-top: 15px;
+        
+        padding-top: 35px;
         h1 {
-          margin-block-start: 0.83em;
-          margin-block-end: 0.83em;
-          margin-inline-start: 0px;
-          margin-inline-end: 0px;
+          font-size: 20px;
+          color: #333333;
+          margin-bottom: 15px;
         }
         ul {
           display: flex;
@@ -107,10 +105,10 @@
     }
 
     .right-main {
-      height: 531px;
-      width: calc(100vw - 300px);
+      height: calc(100vh - 190px);
       padding: 46px 40px;
       background-color: #fafafa;
+      overflow: scroll;
 
       .message {
         padding-bottom: 40px;
