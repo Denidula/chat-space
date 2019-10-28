@@ -45,6 +45,10 @@ group :development, :test do
   gem 'faker'
 
   gem 'capybara'
+
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'pry-doc'
 end
 
 group :development do
@@ -68,3 +72,5 @@ gem 'devise'
 
 gem 'carrierwave'
 gem 'mini_magick'
+
+gem 'jquery-rails'
