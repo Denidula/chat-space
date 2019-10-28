@@ -45,6 +45,10 @@ group :development, :test do
   gem 'faker'
 
   gem 'capybara'
+
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'pry-doc'
 end
 
 group :development do
