@@ -39,7 +39,7 @@ $(function(){
     .done(function(data){
       var html = buildMessage(data);
       $('.right-main').append(html)
-      $('#message_content').val('')
+      $("form")[0].reset();
 
       $(function() {
         var target = $('.message').last();
@@ -50,7 +50,7 @@ $(function(){
       })
     })
     .fail(function(data){
-      alert('エラーでございます。');
+      alert('エラーでございま〜す。');
     })
     .always(function(data){
       $('.form__submit').prop('disabled', false);
