@@ -6,7 +6,7 @@ $(function(){
                     ${message.user_name}
                   </div>
                   <div class="upper-message__date">
-                    ${message.created_at}
+                    ${message.date}
                   </div>
                   </div>
                   <div class="lower-message">
@@ -21,22 +21,31 @@ $(function(){
 
   $('#new_message').on('submit', function(e){
     e.preventDefault();
-    var formData = new FormData(this);
+    var message = new FormData(this);
     var url = $(this).attr('action');
     $.ajax({
       url: url,
       type: "POST",
-      data: formData,
+      data: message,
+      dataType: 'json',
       processData: false,
       contentType: false
     })
-    .done(function(message){
-      var html = buildMessage(message);
+    .done(function(data){
+      var html = buildMessage(data);
       $('.right-main').append(html)
       $('#message_content').val('')
+
+      $(function() {
+        var target = $('.message').last();
+        var position = target.offset().top + $('.right-main').scrollTop();
+        $('.right-main').animate({
+          scrollTop: position
+        }, 300, 'swing');
+      })
     })
-    .fail(function(){
-      alert('エラー');
+    .fail(function(data){
+      alert('エラーが発生したためメッセージは送信できませんでした。');
     })
 
   })
