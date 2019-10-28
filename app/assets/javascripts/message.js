@@ -3,7 +3,7 @@ $(function(){
     var html = `<div class="message">
                   <div class="upper-message">
                   <div class="upper-message__user-name">
-                    Deni
+                    ${message.user_name}
                   </div>
                   <div class="upper-message__date">
                     ${message.created_at}
