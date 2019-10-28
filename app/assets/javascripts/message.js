@@ -1,5 +1,7 @@
 $(function(){
   function buildMessage(message){
+    var content = message.content ? `${message.content}` : "";
+    var img = message.image ? `<img src = ${message.image}>` : "";
     var html = `<div class="message">
                   <div class="upper-message">
                   <div class="upper-message__user-name">
@@ -11,7 +13,10 @@ $(function(){
                   </div>
                   <div class="lower-message">
                   <p class="lower-message__content">
-                    ${message.content}
+                    <div>
+                    ${content}
+                    </div>
+                    ${img}
                   </p>
     
                   </div>
@@ -45,7 +50,7 @@ $(function(){
       })
     })
     .fail(function(data){
-      alert('エラーが発生したためメッセージは送信できませんでした。');
+      alert('エラーでございます。');
     })
     .always(function(data){
       $('.form__submit').prop('disabled', false);
