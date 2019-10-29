@@ -47,19 +47,24 @@
       &__box {
         padding-left: 20px;
         padding-top: 20px;
-        color: #ffffff;
+        
 
-          &__p {
+        a {
+          text-decoration: none;
+          color: #ffffff;
+
+          .left-main__box__p {
             font-size: 15px;
-            font-weight: bold;
+            //font-weight: bold;
             padding-bottom: 5px;
           }
 
-          &__p2 {
+          .left-main__box__p2 {
             font-size: 11px;
-            font-weight: bold;
+            //font-weight: bold;
+            margin-bottom: 40px;
           }
-
+        }
       }
 
     }
@@ -103,7 +108,11 @@
         margin-top: 30px;
         border: solid 1px #38aef0;
         right: 40px;
-        color: #38aef0;
+        
+        a {
+          text-decoration: none;
+          color: #38aef0;
+        }
       }
 
     }
