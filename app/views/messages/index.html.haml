@@ -9,15 +9,16 @@
       
       .right-header__left-box
         %h1
-          sample
+          = @group.name
         %ul 
-          Menber :
+          Menber :&nbsp;
           %li 
-            seo 
-          %li 
-            neko
+            - @group.group_users.each do |group_user|
+              = group_user.user.name
       .right-header__edit-btn
-        Edit
+        %a
+          = link_to edit_group_path(@group.id) do
+            Edit
 
     .right-main
 
