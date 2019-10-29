@@ -4,7 +4,7 @@ $(document).on('turbolinks:load', function(){
     function buildMessage(message){
       var content = message.content ? `${message.content}` : "";
       var img = message.image ? `<img src = ${message.image}>` : "";
-      var html = `<div class="message">
+      var html = `<div class="message" data-id="${message.id}">
                     <div class="upper-message">
                     <div class="upper-message__user-name">
                       ${message.user_name}
@@ -52,7 +52,7 @@ $(document).on('turbolinks:load', function(){
         })
       })
       .fail(function(data){
-        alert('エラーでございま〜す。');
+        alert('エラーです。');
       })
       .always(function(data){
         $('.form__submit').prop('disabled', false);
