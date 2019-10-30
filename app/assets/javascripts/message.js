@@ -135,7 +135,7 @@ $(document).on('turbolinks:load', function(){
 
     };
 
-    if (document.URL.match("/messages/")) {
+    if (document.URL.match("/messages")) {
       setInterval(reloadMessages, 5000);
     }
     
