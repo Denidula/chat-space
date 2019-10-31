@@ -5,8 +5,11 @@ $(document).on('turbolinks:load', function(){
 
 
     function buildMessage(message){
+
+      var content = message.content ? `${message.content}` : "";
+      var image = message.image ? `<img src = ${message.image}>` : "";
       
-      if (message.content && message.image) {
+      
         var html = `<div class="message" data-id='${message.id}'>
                     <div class="upper-message">
                     <div class="upper-message__user-name">
@@ -19,50 +22,14 @@ $(document).on('turbolinks:load', function(){
                     <div class="lower-message">
                     <p class="lower-message__content">
                       <div>
-                      ${message.content}
+                      ${content}
                       </div>
-                      <img src = "${message.image}">
+                      ${image}
                     </p>
                     </div>
                   </div>`;
         return html;
-      } else if (message.content) {
-        var html = `<div class="message" data-id='${message.id}'>
-                      <div class="upper-message">
-                        <div class="upper-message__user-name">
-                          ${message.user_name}
-                        </div>
-                        <div class="upper-message__date">
-                          ${message.date}
-                        </div>
-                      </div>
-                      <div class="lower-message">
-                        <p class="lower-message__content">
-                          ${message.content}
-                        </p>
-                      </div>
-                    </div>`;
-        return html;
-      } else if (message.image) {
-        var html = `<div class="message" data-id='${message.id}'>
-                    <div class="upper-message">
-                    <div class="upper-message__user-name">
-                      ${message.user_name}
-                    </div>
-                    <div class="upper-message__date">
-                      ${message.date}
-                    </div>
-                    </div>
-                    <div class="lower-message">
-                    <p class="lower-message__content">
-                      <div>
-                      <img src = "${message.image}">
-                      </div>
-                    </p>
-                    </div>
-                  </div>`;
-        return html;
-      }
+      
     }
   
     $('#new_message').on('submit', function(e){
