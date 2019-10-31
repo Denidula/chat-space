@@ -21,7 +21,7 @@ $(document).on('turbolinks:load', function(){
                       <div>
                       ${message.content}
                       </div>
-                      ${message.image}
+                      <img src = "${message.image}">
                     </p>
                     </div>
                   </div>`;
@@ -56,7 +56,7 @@ $(document).on('turbolinks:load', function(){
                     <div class="lower-message">
                     <p class="lower-message__content">
                       <div>
-                        ${message.image}
+                      <img src = "${message.image}">
                       </div>
                     </p>
                     </div>
