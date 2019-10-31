@@ -5,9 +5,7 @@ $(document).on('turbolinks:load', function(){
 
 
     function buildMessage(message){
-      var content = message.content ? `${message.content}` : "";
-      var image = message.image ? `<img src = ${message.image}>` : "";
-     
+      
       if (message.content && message.image) {
         var html = `<div class="message" data-id='${message.id}'>
                     <div class="upper-message">
@@ -21,9 +19,9 @@ $(document).on('turbolinks:load', function(){
                     <div class="lower-message">
                     <p class="lower-message__content">
                       <div>
-                      ${content}
+                      ${message.content}
                       </div>
-                      ${image}
+                      ${message.image}
                     </p>
                     </div>
                   </div>`;
@@ -40,7 +38,7 @@ $(document).on('turbolinks:load', function(){
                       </div>
                       <div class="lower-message">
                         <p class="lower-message__content">
-                          ${content}
+                          ${message.content}
                         </p>
                       </div>
                     </div>`;
@@ -58,7 +56,7 @@ $(document).on('turbolinks:load', function(){
                     <div class="lower-message">
                     <p class="lower-message__content">
                       <div>
-                        ${image}
+                        ${message.image}
                       </div>
                     </p>
                     </div>
