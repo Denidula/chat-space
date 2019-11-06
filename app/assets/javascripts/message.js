@@ -101,9 +101,9 @@ $(document).on('turbolinks:load', function(){
 
     };
 
-    if (document.URL.match("/messages")) {
+    if (document.URL.match("/groups/\d/messages")) {
       setInterval(reloadMessages, 5000);
-    }
+    };
 
   });
   
