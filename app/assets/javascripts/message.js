@@ -70,6 +70,9 @@ $(document).on('turbolinks:load', function(){
     
 
     var reloadMessages = function() {
+
+      if (document.URL.match("/messages")) {
+      
       //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
       
       var last_message_id = $('.message:last').data('id');
@@ -101,12 +104,15 @@ $(document).on('turbolinks:load', function(){
 
     };
 
-    if (document.URL.match("/groups/\d/messages")) {
-      setInterval(reloadMessages, 5000);
-    };
+    
+      
+    }
+    
+    setInterval(reloadMessages, 5000);
 
   });
   
 
 });
+
 
